@@ -1,8 +1,6 @@
 let somaNotas = 0;
 
-let vezes = 5;
-
-for (let i = 0; i < vezes; i++) {
+for (let i = 0; i < 5; i++) {
     let notas = parseFloat(prompt("Insira uma nota:"));
 
     if (isNaN(notas) || notas < 0) {
@@ -16,5 +14,5 @@ for (let i = 0; i < vezes; i++) {
 
 }
 
-let media = somaNotas / vezes;
+let media = somaNotas / 5;
 alert(`A média das notas é ${media}`)
