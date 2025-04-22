@@ -1,17 +1,20 @@
-const num = parseInt(prompt("Digite um número para mostrar os números de 1 até ele:"));
+let soma = 0;
 
-if (isNaN(num) || num <= 1) {
-    alert("Erro: Número Inválido!");
-} else {
+let vezes = 10;
 
-    let sequencia = 0;
+for (let i = 0; i < vezes; i++) {
+    let num = parseFloat(prompt("Insira um número:"));
 
-    let lista = "";
+    if (isNaN(num)) {
+        alert("Erro: Você não inseriu um número válido!");
 
-    for (let i = 1; sequencia < num;) {
-        sequencia += i;
-        lista += `${sequencia}\n`;
-        
+        i--;
+
+    } else {
+
+        soma += num
+
     }
-    alert(`A sequência é: \n ${lista}`);
+
 }
+alert(`A soma dos 10 números é: ${soma}`)
