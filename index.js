@@ -1,8 +1,6 @@
 let soma = 0;
 
-let vezes = 10;
-
-for (let i = 0; i < vezes; i++) {
+for (let i = 0; i < 10; i++) {
     let num = parseFloat(prompt("Insira um número:"));
 
     if (isNaN(num)) {
