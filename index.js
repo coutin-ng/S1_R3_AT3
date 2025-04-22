@@ -1,20 +1,14 @@
-let soma = 0;
+let num = parseFloat(prompt("Insira um número para ver sua tabuada:"));
 
-let vezes = 10;
+if (isNaN(num)) {
+    alert("Erro: Você não digitou um número válido!");
+} else {
+    let vezes = 10;
 
-for (let i = 0; i < vezes; i++) {
-    let num = parseFloat(prompt("Insira um número:"));
+    let tabuada = "";
 
-    if (isNaN(num)) {
-        alert("Erro: Você não inseriu um número válido!");
-
-        i--;
-
-    } else {
-
-        soma += num
-
+    for (i = 1; i <= vezes; i++) {
+        tabuada += (num * i) + "\n"
     }
-
+    alert(`A tabuada de ${num} é: \n ${tabuada}`);
 }
-alert(`A soma dos 10 números é: ${soma}`)
