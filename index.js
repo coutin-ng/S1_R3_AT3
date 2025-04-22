@@ -1,20 +1,20 @@
-let soma = 0;
+let somaNotas = 0;
 
-let vezes = 10;
+let vezes = 5;
 
 for (let i = 0; i < vezes; i++) {
-    let num = parseFloat(prompt("Insira um número:"));
+    let notas = parseFloat(prompt("Insira uma nota:"));
 
-    if (isNaN(num)) {
+    if (isNaN(notas) || notas < 0) {
         alert("Erro: Você não inseriu um número válido!");
 
         i--;
 
     } else {
-
-        soma += num
-
+        somaNotas += notas
     }
 
 }
-alert(`A soma dos 10 números é: ${soma}`)
+
+let media = somaNotas / vezes;
+alert(`A média das notas é ${media}`)
