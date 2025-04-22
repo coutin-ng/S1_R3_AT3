@@ -1,20 +1,41 @@
-let somaNotas = 0;
+let numUm = parseInt(prompt("Insira um número:"));
 
-let vezes = 5;
+let numDois = parseInt(prompt("Insira outro número:"))
 
-for (let i = 0; i < vezes; i++) {
-    let notas = parseFloat(prompt("Insira uma nota:"));
+if (isNaN(numUm) && isNaN(numDois) || numUm == numDois) {
+    alert("Erro: Você não digitou números válidos!")
 
-    if (isNaN(notas) || notas < 0) {
-        alert("Erro: Você não inseriu um número válido!");
+} else {
 
-        i--;
+    let numPares = ""
 
-    } else {
-        somaNotas += notas
+    let inicio
+
+    let final
+
+    if (numUm < numDois) {
+
+        inicio = numUm;
+
+        final = numDois;
+
+    }else {
+
+        inicio = numDois;
+
+        final = numUm;
+
     }
+
+    for (let i = inicio; i <= final; i++) {
+
+        if (i % 2 == 0) {
+            numPares += i + " ";
+        }
+
+    }
+
+    alert(`Os números pares entre os dois números são: ${numPares}`);
 
 }
 
-let media = somaNotas / vezes;
-alert(`A média das notas é ${media}`)
